@@ -1,0 +1,106 @@
+:root{
+    --first-color: #bf8f3b;
+    --second-color:#f7edb2;
+    --third-color:#dec286;
+    --third-color-alt: #f7e085;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+/*inicia primera seccion de la pagina */
+.primera-seccion{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.548),rgba(0, 0, 0, 0.548)), url(../img/portada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center ;
+}
+
+header{
+    color: white;
+    font-weight:bolder;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    height: 30vh;
+    padding: 20px;
+} 
+
+.primer-contenedor{
+    text-shadow: 2px 2px 2px var(--first-color);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.contenedor-hijo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.segundo-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.llamar {
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-size:20px;
+    -webkit-filter: drop-shadow(2px 2px 2px var(--first-color));
+    filter: drop-shadow(2px 2px 2px var(--first-color));
+}
+
+.redes{
+    color: white;
+    font-size: 30px;
+    -webkit-filter: drop-shadow(2px 2px 2px var(--first-color));
+    filter: drop-shadow(2px 2px 2px var(--first-color));
+}
+
+.logo{
+    width: 100px;
+    -webkit-filter: drop-shadow(2px 2px 2px var(--first-color));
+    filter: drop-shadow(2px 2px 2px var(--first-color));
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size:medium;
+    text-shadow: 2px 2px 2px var(--first-color);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.nombre{
+    text-shadow: 2px 2px 2px var(--first-color);
+    display: flex;
+    align-items: center;
+
+}
+
+.menu a:hover{
+    color: black;
+    text-shadow: none;
+}
+
+.titulo {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
