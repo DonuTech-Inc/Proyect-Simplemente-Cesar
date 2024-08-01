@@ -119,6 +119,38 @@
     filter: drop-shadow(2px 2px 2px var(--first-color));
   }
 
+.gran-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    color: white;
+    text-shadow: 2px 2px 2px var(--first-color);
+    text-align: center;
+    height: 60vh;
+    
+}
+
+.gran-titulo h1{
+    font-size: 80px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.gran-titulo h6 , h5{
+    font-style: italic;
+}
+.gran-titulo button{
+    width: 150px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: larger;
+}
+
   @media only screen and (max-width: 375px){
     .logo{
         display: none;
