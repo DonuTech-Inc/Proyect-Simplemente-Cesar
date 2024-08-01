@@ -9,8 +9,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
 }
 
 /*inicia primera seccion de la pagina */
@@ -22,29 +20,32 @@
     background-position-y: center ;
 }
 
-header{
+/* header{
     color: white;
     font-weight:bolder;
     display: flex;
     flex-direction: column;
     align-content: space-around;
     justify-content: center;
-    height: 30vh;
     padding: 20px;
-} 
+}  */
 
 .primer-contenedor{
     text-shadow: 2px 2px 2px var(--first-color);
     display:flex;
     justify-content: space-between;
     align-items: center;
-    
+    color: white;
+    padding: 20px;
+    padding-bottom: 0;
+
 }
 
 .contenedor-hijo{
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .segundo-contenedor{
     display: flex;
@@ -60,7 +61,11 @@ header{
     -webkit-filter: drop-shadow(2px 2px 2px var(--first-color));
     filter: drop-shadow(2px 2px 2px var(--first-color));
 }
-
+.grueso{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 .redes{
     color: white;
     font-size: 30px;
@@ -74,29 +79,32 @@ header{
     filter: drop-shadow(2px 2px 2px var(--first-color));
 }
 
-.menu a{
-    color: white;
-    text-decoration: none;
-    font-size:medium;
-    text-shadow: 2px 2px 2px var(--first-color);
-}
-
-.menu{
+.nav-link{
     display: flex;
     justify-content: space-evenly;
     gap: 30px;
+    color: white !important;
+    text-shadow: 2px 2px 2px var(--first-color);
+    font-weight: 500!important;
 }
 
-.nombre{
+.nav-link:hover{
+    text-shadow: none;
+}
+
+.nombre, .navbar-brand{
+    color: white !important;
     text-shadow: 2px 2px 2px var(--first-color);
     display: flex;
     align-items: center;
-
+    font-weight: 700!important;
+    letter-spacing: 2px;
 }
 
-.menu a:hover{
-    color: black;
-    text-shadow: none;
+.navbar-collapse{
+    justify-content:flex-end !important;
+    text-align: center;
+    align-items: center !important;
 }
 
 .titulo {
@@ -104,3 +112,56 @@ header{
     font-weight: 900;
     font-style: normal;
   }
+
+  .navbar-toggler{
+    background-color: white !important;
+    -webkit-filter: drop-shadow(2px 2px 2px var(--first-color));
+    filter: drop-shadow(2px 2px 2px var(--first-color));
+  }
+
+  @media only screen and (max-width: 375px){
+    .logo{
+        display: none;
+    }
+
+    .navbar-brand{
+        letter-spacing: normal;
+        font-weight: 500 !important;
+    }
+  }
+  
+  @media only screen and (max-width: 425px){
+    .primer-contenedor{
+        display: none;
+    }
+
+    .navbar>.container-fluid{
+        justify-content: center !important;
+    }
+
+  }
+
+  @media only screen and (max-width: 439px){
+    .logo{
+        width: 75px;
+    }
+  }
+
+  @media only screen and (min-width:425px) and (max-width: 625px){
+    .primer-contenedor{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+  }
+
+  @media only screen and (max-width: 991px){
+    .navbar-collapse{
+        text-align: left;
+        padding-left: 10px;
+    }
+  }
+
+
+
