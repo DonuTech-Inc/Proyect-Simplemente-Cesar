@@ -160,8 +160,7 @@
         typewriter 4s steps(44) 1s 1 normal both, 
         blinkTextCursor 500ms steps(44) infinite normal;
 }
-
-
+/*BOTON CON ANIMACION*/
 .btnfos {
     color: #fff;
     cursor: pointer;
