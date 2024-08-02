@@ -129,7 +129,7 @@
     color: white;
     text-shadow: 2px 2px 2px var(--first-color);
     text-align: center;
-    height: 60vh;
+    height: 80vh;
     
 }
 
@@ -169,6 +169,9 @@
 
     .navbar>.container-fluid{
         justify-content: center !important;
+    }
+    .gran-titulo h1{
+        font-size: 40px;
     }
 
   }
