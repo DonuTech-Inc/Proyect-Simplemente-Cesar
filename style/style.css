@@ -142,6 +142,25 @@
     letter-spacing: 2px;
     font-size: larger;
 }
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: transparent; }
+    to { border-right-color: transparent; }
+}
+
+#bienvenido-texto{
+    display: inline-block;
+    overflow: hidden;
+    white-space: wrap;
+    border-right: 0.15em solid transparent; /* Ajusta el color y el grosor del cursor aquí */
+    animation: 
+        typewriter 4s steps(44) 1s 1 normal both, 
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
 
   @media only screen and (max-width: 375px){
     .logo{
