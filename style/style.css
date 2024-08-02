@@ -20,16 +20,6 @@
     background-position-y: center ;
 }
 
-/* header{
-    color: white;
-    font-weight:bolder;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: center;
-    padding: 20px;
-}  */
-
 .primer-contenedor{
     
     display:flex;
@@ -156,7 +146,7 @@
     display: inline-block;
     overflow: hidden;
     white-space: wrap;
-    border-right: 0.15em solid transparent; /* Ajusta el color y el grosor del cursor aquí */
+    border-right: 0.15em solid transparent;
     animation: 
         typewriter 4s steps(44) 1s 1 normal both, 
         blinkTextCursor 500ms steps(44) infinite normal;
