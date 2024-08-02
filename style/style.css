@@ -124,23 +124,7 @@
 .gran-titulo h6 , h5{
     font-style: italic;
 }
-/* .gran-titulo a{
-    width: 150px;
-    border-radius: 20px;
-    font-weight: bolder;
-    margin-top: 20px;
-    letter-spacing: 2px;
-    font-size: larger;
-    font-size: 20px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 8px;
-} */
+
 @keyframes typewriter {
     from { width: 0; }
     to { width: 100%; }
