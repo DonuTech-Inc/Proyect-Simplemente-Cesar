@@ -222,6 +222,46 @@ h5 {
 }
 /*fin primera seccion*/
 
+/*Inicio de segunda seccion*/
+.segunda-seccion {
+    height: 100vh;
+    width: 100%;
+}
+
+#titulo-segundaSeccion {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.contenido-segundaSeccion {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.lineaVertical {
+    border: 1.7px solid black;
+}
+
+.imagenes-contenido--segundaSeccion img { 
+    display: flex;
+    width: 230px;
+    height: 230px;
+    padding-bottom: 15px;
+    border-radius: 30px;
+}
+
+.respuestas-contenido--segundaSeccion {
+    display: flex;
+    flex-direction: column;
+}
+
+.respuesta {
+    border: solid 1.5px black;
+}
+
 /*inicio tercera seccion*/
 
 .tercera-seccion {
