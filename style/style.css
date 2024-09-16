@@ -13,7 +13,7 @@
 
 /*inicia primera seccion de la pagina */
 .primera-seccion {
-    height: 100vh;
+    height: max-content;
     background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.548)), url(../img/portada.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -224,8 +224,27 @@ h5 {
 
 /*Inicio de segunda seccion*/
 .segunda-seccion {
-    height: 100vh;
-    width: 100%;
+    height: max-content;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0; /* Inicialmente oculta */
+    transform: translateY(50px); /* Desplazada ligeramente hacia abajo */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición normal */
+}
+
+
+.segunda-seccion h4{
+    letter-spacing: 10px;
+    text-align: center;
 }
 
 #titulo-segundaSeccion {
@@ -237,35 +256,60 @@ h5 {
 
 .contenido-segundaSeccion {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    gap: 2vw;
 }
 
 .lineaVertical {
     border: 1.7px solid black;
 }
 
+.imagenes-contenido--segundaSeccion{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .imagenes-contenido--segundaSeccion img { 
     display: flex;
-    width: 230px;
+    width: 330px;
     height: 230px;
     padding-bottom: 15px;
     border-radius: 30px;
 }
 
 .respuestas-contenido--segundaSeccion {
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .respuesta {
-    border: solid 1.5px black;
+    border: solid 2px black;
+    width: 35vw;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    height: 30%;
+}
+
+.respuesta a{
+    color: black;
+    font-size: 2vw;
+    width: 20%;
+    text-align: center;
+}
+
+.respuesta div{
+    width: 80%;
 }
 
 /*inicio tercera seccion*/
 
 .tercera-seccion {
-    height: 100vh;
+    height: max-content;
+    padding: 5vw;
     background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.527)),url(../img/fondo-servicios.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -273,7 +317,6 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
     border-top: 2.5px solid white;
 }
 
@@ -294,13 +337,13 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 10000px;
+    width: 90vw;
+    padding-top: 10vh;
 }
 
 .card {
-    width: 350px !important;
-    height: 380px !important;
+    width: 22vw !important;
+    height: max-content !important;
     background: rgb(255, 255, 255) !important;
     border: 2px solid rgb(0, 0, 0) !important;
     border-radius: 20px !important;
@@ -314,11 +357,12 @@ h5 {
     margin: 0 15px;
     position: relative;
     transition: transform 0.5s ease, opacity 0.5s ease;
+    text-align: center !important;
 }
 
 .card img {
     width: 100%;
-    height: 250px;
+    height: 45%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -363,23 +407,128 @@ h5 {
 }
 
 .prev {
-    left: -50px;
+    left: 1vw;
 }
 
 .next {
-    right: -50px;
+    right: 1vw;
 }
 
 /*fin tercera seccion*/
 
+/* Inicio cuarta seccion */
+.cuarta-seccion {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh;
+    gap: 30px;
+    background-color: #f4f4f4;
+}
+
+.elementos-superiores--texto {
+    height: 30vh;
+}
+
+.elementos-superiores--cuartaSeccion {
+    width: 80vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.elementos-superiores--texto {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.elementos-superiores--texto h4{
+    letter-spacing: 8px;
+}
+
+.elementos-superiores--texto img {
+    width: 30vw;
+    height: 25vh;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.elementos-superiores--cuartaSeccion-video {
+    display: flex;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.elementos-superiores--cuartaSeccion .video video  {
+    width: 36vw;
+    height: 44vh;
+}
+
+.elementos-superiores--cuartaSeccion .video{
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.imagenes-proyectos{
+    width: 80vw;
+    display: flex;
+    height: 30vh;  
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imagenes-proyectos img{
+    width: 15.5vw;
+    height: 30vh;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.imagenes-proyectos img:hover{
+    transform: scale(1.2); 
+}
+
+.vermas{
+    border: 1px solid white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.404),rgba(0, 0, 0, 0.404)),url("../img/proyecto4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    width: 15.5vw;
+    height: 30vh;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.vermas:hover{
+    transform: scale(1.2); 
+}
+
+
 /*inicio quinta seccion*/
 .quinta-seccion{
-    height: 90vh;
+    height: max-content;
+    padding: 2vw 0 3vw 0;
     display: flex;
+    gap: 2vw;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
     border-top: 3px solid black;
+    opacity: 0; /* Inicialmente oculta */
+    transform: translateY(50px); /* Desplazada ligeramente hacia abajo */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición normal */
 }
 
 .quinta-seccion h4{
@@ -391,28 +540,33 @@ h5 {
 .quinta-seccion img{
     border-radius: 100%;
     border: 2px solid black;
-    width: 150px;
-    height: 150px;
+    width: 10vw;
+    height: 15vh;
 }
 .content-testi{
+    width: 90vw;
     display: flex;
     align-items: center;
-    gap: 8rem;
+    justify-content: space-evenly;
 }
 .perfil{
-    width: 250px;
-    height: 380px;
+    width: 20vw;
+    height: 40vh;
     padding: 10px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     border: 2px solid rgb(146, 145, 145) ;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px gray;
+}
+
+.perfil:hover{
+    transform: scale(1.1); 
 }
 
 .perfil h6{
@@ -495,14 +649,20 @@ h5 {
     font-size: 24px;
     display: none;
     transition: background-color 0.3s ease;
+    border: 1px solid black;
 }
 
 .back-to-top:hover {
     background-color: black;
-    color: white;
     border: 1px solid white;
 }
+.back-to-top a:hover {
+    color: white;
+}
 
+.back-to-top a{
+    color: black;
+}
 @media only screen and (max-width: 375px) {
     .logo {
         display: none;
@@ -512,6 +672,12 @@ h5 {
         letter-spacing: normal;
         font-weight: 500 !important;
     }
+
+    .segunda-seccion{
+        height: max-content;
+        padding: 2vw 0 2vw 0;
+    }
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -527,11 +693,79 @@ h5 {
         font-size: 40px;
     }
 
+    .card img{
+       display: none;
+    }
+
+    .carousel{
+        padding-bottom: 7vh !important;
+    }
+
 }
 
 @media only screen and (max-width: 439px) {
     .logo {
         width: 75px;
+    }
+
+    .imagenes-proyectos{
+        display: none;
+    }
+
+    .elementos-superiores--cuartaSeccion{
+        height: max-content;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .elementos-superiores--texto img{
+        display: none;
+    }
+    .elementos-superiores--cuartaSeccion-video{
+        width: 80vw;
+        height: 37vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .elementos-superiores--cuartaSeccion-video .video{
+        height: 37vh;
+    }
+
+    .elementos-superiores--cuartaSeccion-video .video video{
+        width: 80vw;
+    }
+
+    .elementos-superiores--texto{
+        width: 80vw;
+        height: max-content;
+    }
+
+    .quinta-seccion{
+        padding: 4vw;
+    }
+
+    .quinta-seccion h4{
+        padding: 0 10vw 0 10vw;
+    }
+
+    .content-testi{
+        flex-direction: column;
+    }
+
+    .perfil{
+        width: 80vw !important;
+        height: fit-content;
+        box-shadow: 2px 2px 2px 2px gray;
+    }
+
+    .perfil img{
+       display: none;
+    }
+
+    .sexta-seccion h4{
+        text-align: center;
     }
 }
 
@@ -544,9 +778,85 @@ h5 {
 
 }
 
+@media only screen and (max-width:768px){
+
+    .contenido-segundaSeccion{
+        flex-direction: column;
+    }
+    .imagenes-contenido--segundaSeccion{
+        width: 90vw;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .imagenes-contenido--segundaSeccion img{
+        width: 40vw;
+    }
+    .lineaVertical{
+        display: none;
+    }
+    .respuestas-contenido--segundaSeccion{
+        width: 90vw;
+    }
+
+    .respuesta{
+        width:90vw;
+    }
+
+    .respuesta a{
+        font-size: 4.5vw;
+    }
+    .perfil img{
+        height: 20%;
+    }
+    .tercera-seccion{
+        text-align: center;
+    }
+
+    .card{
+        width: 40vw !important;
+    }
+
+    .carousel{
+        padding-bottom: 3vh;
+    }
+
+    .card:not(.focus){
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .navbar-collapse {
         text-align: left;
         padding-left: 10px;
     }
+
+    .content-testi{
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        gap: 5vw;
+    }
+
+    .perfil{
+        width: 30vw;
+        height: max-content;
+    }
+
+    .elementos-superiores--cuartaSeccion-video .video video{
+        height: 37vh;
+    }
+
+    .imagenes-proyectos img{
+        width: 17vw;
+        height: 18vh;
+    }
+
+    .vermas{
+        width: 17vw;
+        height: 18vh;
+    }
+
+
 }

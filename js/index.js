@@ -82,3 +82,32 @@ document.getElementById("backToTop").addEventListener("click", function() {
         behavior: 'smooth' // Desplazamiento suave
     });
 });
+
+// Usamos Intersection Observer para detectar cuando la sección entra en el viewport
+document.addEventListener("DOMContentLoaded", () => {
+    const seccion = document.querySelector('.segunda-seccion' );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Añadir clase visible cuando entra en el viewport
+            }
+        });
+    });
+
+    observer.observe(seccion);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const seccion = document.querySelector('.quinta-seccion' );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Añadir clase visible cuando entra en el viewport
+            }
+        });
+    });
+
+    observer.observe(seccion);
+});
